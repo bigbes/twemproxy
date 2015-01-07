@@ -119,8 +119,8 @@ struct server_pool {
     unsigned           require_auth;         /* require_auth? */
     unsigned           auto_eject_hosts:1;   /* auto_eject_hosts? */
     unsigned           preconnect:1;         /* preconnect? */
-    unsigned           redis:1;              /* redis? */
     unsigned           tcpkeepalive:1;       /* tcpkeepalive? */
+    proto_type_t       proto;                /* protocol */
 };
 
 void server_ref(struct conn *conn, void *owner);
